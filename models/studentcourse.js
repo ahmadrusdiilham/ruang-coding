@@ -12,6 +12,12 @@ module.exports = (sequelize, DataTypes) => {
       StudentCourse.belongsTo(models.Course);
       // define association here
     }
+    statusStudent() {
+      return "on progres";
+    }
+    get formaterDate() {
+      return this.createdAt.toISOString().split("T")[0];
+    }
   }
   StudentCourse.init(
     {
@@ -20,6 +26,11 @@ module.exports = (sequelize, DataTypes) => {
       CourseId: DataTypes.INTEGER,
     },
     {
+      hooks: {
+        beforeCreate: (instance, options) => {
+          instance.status = instance.statusStudent();
+        },
+      },
       sequelize,
       modelName: "StudentCourse",
     }

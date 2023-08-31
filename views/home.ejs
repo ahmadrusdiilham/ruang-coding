@@ -50,7 +50,7 @@
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="/#"
+              <a class="nav-link active" aria-current="page" href="/logout"
                 >Log out</a
               >
             </li>
@@ -58,30 +58,62 @@
         </div>
       </div>
     </nav>
-<!-- 
-    <h1>HOME NIH BOUS</h1>
-    <a href="/logout">Logout</a>
-    <a href="/student">Student List</a>
-    <a href="/student/add">Add Student</a> -->
+    <div style="text-align: center">
+      <% if (error) { %>
+      <h1 style="color: red"><%= error %></h1>
+      <% } %>
+    </div>
 
-    <div class="content" style="display: flex; align-items: center;">
-      <div class="col">
-        <img
-          src="https://blog.herzing.ca/hubfs/iStock-1282402777.jpg"
-          alt="working"
-          class="img-thumbnail"
-          style="width: 500px; max-width: 100%"
-        />
-      </div>
-      <div class="col text-center" style="display: block; align-items: center;">
+    <div class="content" style="display: flex; align-items: center">
+      <div class="col"></div>
+      <div class="col text-center" style="display: block; align-items: center">
         <h3 class="text-center">YOUR DREAMS COME TRUE</h3>
         <p class="text-center">
           mari wujudkan mimpimu bersama kami , bekerja dimanapun dan kapanpun
         </p>
-        <a href="/register" class="btn btn-primary center" >register</a>
+        <a href="/register" class="btn btn-primary center">register</a>
       </div>
     </div>
+    <body >
+      <div class="col-8 offset-2 my-5">
+        <div class="card">
+          <div class="card-body">
+            <h3>Chart Course</h3>
+            <hr>
+            <canvas id="myChart"></canvas>
+          </div>
+        </div>
+      </div>
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      <script>
+        const ctx = document.getElementById('myChart');
+      
+        new Chart(ctx, {
+          type: 'bar',
+          data: {
+            labels: ['JavaScript', 'PHP', 'Go', 'Swift', 'C++', 'Python'],
+            datasets: [{
+              label: 'Total Course',
+              data: [2, 2, 1, 1, 1, 1],
+              borderWidth: 1
+            }]
+          },
+          options: {
+            scales: {
+              y: {
+                beginAtZero: true
+              }
+            }
+          }
+        });
+      </script>
 
+
+    </body>
+
+   
+
+    
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"

@@ -55,6 +55,9 @@ class ControllerStudent {
         res.send(err);
       });
   }
+  // static buy(req, res) {
+  //   console.log(req.session);
+  // }
 }
 
 module.exports = ControllerStudent;

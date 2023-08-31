@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>List Student</title>
+    <title>Daftar Student</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -13,26 +13,20 @@
   </head>
   <body>
     <%- include("partials/_navbar") %>
-
-    <h1>List Student</h1>
+    <h1 style="text-align: center; margin: 15px 15px">
+      <%= status.name %> | Daftar Student
+    </h1>
     <table class="table">
       <tr>
-        <th>No</th>
-        <th>Name</th>
-        <th>Date Of Birth</th>
-        <th>City</th>
-        <th>Action</th>
+        <th>Email</th>
+        <th>Date Of Register</th>
+        <th>Status</th>
       </tr>
-      <% dataStudent.forEach((el, i) => { %>
+      <% status.Users.forEach(el => { %>
       <tr>
-        <td><%= ++i %></td>
-        <td><%= el.name %></td>
-        <td><%= el.formaterDate %></td>
-        <td><%= el.city %></td>
-        <td>
-          <a class="btn btn-primary" href="/student/<%= el.id %>">Detail</a>
-          <a class="btn btn-primary" href="/student/<%= el.id %>/edit">Edit</a>
-        </td>
+        <td><%= el.email %></td>
+        <td><%= el.StudentCourse.formaterDate %></td>
+        <td><%= el.StudentCourse.status %></td>
       </tr>
       <% }) %>
     </table>

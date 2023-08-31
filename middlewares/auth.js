@@ -10,7 +10,7 @@ const isLoggedin = function (req, res, next) {
 const isInstructor = function (req, res, next) {
   if (req.session.userId && req.session.role !== "instructor") {
     const error = "You Have no Access";
-    res.redirect(`/login?error=${error}`);
+    res.redirect(`/course?error=${error}`);
   } else {
     next();
   }

@@ -3,13 +3,14 @@ const { User, StudentProfil } = require("../models/index");
 var bcrypt = require("bcryptjs");
 class ControllerUser {
   static home(req, res) {
-    res.render("home");
+    const { error } = req.query;
+    res.render("home", { error });
   }
 
   static register(req, res) {
     const { error } = req.query;
     // console.log(req.query);
-    res.render("author/register", { error });
+    res.render("author/register");
   }
 
   static postRegister(req, res) {
