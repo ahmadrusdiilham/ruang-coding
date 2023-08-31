@@ -14,7 +14,9 @@
   <body>
     <h1 style="text-align: center">Register</h1>
     <div style="text-align: center; color: red">
-      <% if (error) { %> <%= error %> <% } %>
+      <% if (error) { %> 
+        <%= error %> 
+        <% } %>
     </div>
     <div class="container-sm">
       <form action="/register" method="POST">

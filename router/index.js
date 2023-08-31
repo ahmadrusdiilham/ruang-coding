@@ -11,10 +11,9 @@ router.get("/login", ControllerUser.login);
 router.post("/login", ControllerUser.postLogin);
 router.get("/logout", ControllerUser.logout);
 
+router.use(isLoggedin);
 router.get("/", ControllerUser.home);
 router.get("/home", ControllerUser.home);
-
-router.use(isLoggedin);
 router.use(require("./student"));
 router.use(require("./course"));
 

@@ -9,8 +9,7 @@ class ControllerUser {
 
   static register(req, res) {
     const { error } = req.query;
-    // console.log(req.query);
-    res.render("author/register");
+    res.render("author/register", { error });
   }
 
   static postRegister(req, res) {
@@ -28,7 +27,7 @@ class ControllerUser {
         });
       })
       .then(() => {
-        res.redirect("/author/login");
+        res.redirect("author/login");
       })
       .catch((err) => {
         if (err.name == "SequelizeValidationError") {
@@ -46,10 +45,15 @@ class ControllerUser {
 
   static login(req, res) {
     const { error } = req.query;
+    console.log(req.query);
     res.render("author/login", { error });
   }
   static postLogin(req, res) {
     const { email, password } = req.body;
+    if (!email || !password) {
+      const error = `invalid username/password`;
+      return res.redirect(`/login?error=${error}`);
+    }
     User.findOne({ where: { email } })
       .then((user) => {
         if (user) {
@@ -60,11 +64,11 @@ class ControllerUser {
             return res.redirect("/home");
           } else {
             const error = `invalid username/password`;
-            return res.redirect(`author/login?error=${error}`);
+            return res.redirect(`/login?error=${error}`);
           }
         } else {
           const error = "invalid username/password";
-          return res.redirect(`author/login?error=${error}`);
+          return res.redirect(`/login?error=${error}`);
         }
       })
       .catch((err) => {
