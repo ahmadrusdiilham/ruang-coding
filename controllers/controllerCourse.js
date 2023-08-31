@@ -38,5 +38,12 @@ class ControllerCourse {
         res.sendr(err);
       });
   }
+
+static delete(req, res){
+  
 }
+
+}
+
+
 module.exports = ControllerCourse;
