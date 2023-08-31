@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Javascript Dasar",
+    "description": "Intro to Programming, Variables and Data Types, Conditional and Loop Statements, Array and Function, Object Oriented Programming (OOP), Data Structure, Algorithm",
+    "duration": 1,
+    "price": 5000000,
+    "CategoryId": 1
+  },
+  {
+    "name": "C++ Dasar",
+    "description": "Intro to Programming, Variables and Data Types, Conditional and Loop Statements, Array and Function, Object Oriented Programming (OOP), Data Structure, Algorithm",
+    "duration": 2,
+    "price": 3000000,
+    "CategoryId": 5
+  },
+  {
+    "name": "PHP Dasar",
+    "description": "Intro to Programming, Variables and Data Types, Conditional and Loop Statements, Array and Function, Object Oriented Programming (OOP), Data Structure, Algorithm",
+    "duration": 1,
+    "price": 1000000,
+    "CategoryId": 2
+  },
+  {
+    "name": "Javascript Lanjutan",
+    "description": "Intro to Programming, Variables and Data Types, Conditional and Loop Statements, Array and Function, Object Oriented Programming (OOP), Data Structure, Algorithm",
+    "duration": 3,
+    "price": 20000000,
+    "CategoryId": 1
+  }
+]

@@ -1,0 +1,17 @@
+[
+  {
+    "email": "ujang@gmail.com",
+    "password": "ujang123",
+    "role": "student"
+  },
+  {
+    "email": "bambang@gmail.com",
+    "password": "bambang123",
+    "role": "student"
+  },
+  {
+    "email": "budi@gmail.com",
+    "password": "budi123",
+    "role": "instructor"
+  }
+]

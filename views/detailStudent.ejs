@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  </head>
+  <body>
+    <h1 style="text-align: center;margin: 15px 15px;"><%=detailStudent.name%></h1>
+    <div style="text-align: center;">
+        <img src="<%=detailStudent.photoUrl%>" alt="">
+
+    </div>
+    <table class="table">
+        <tr>
+          <th>name</th>
+          <th>Date Of Birth</th>
+          <th>City</th>
+          <th>School</th>
+
+        </tr>
+        <tr>
+          <td><%=detailStudent.name  %></td>
+          <td><%= detailStudent.formaterDate %></td>
+          <td><%= detailStudent.city %></td>
+          <td><%= detailStudent.school %></td>
+          <!-- <td><img src="<#=detailStudent.photo %>" alt="" width="100" height="100"></td -->
+
+      </table>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+  </body>
+</html>
