@@ -6,7 +6,7 @@ const router = require("express").Router();
 router.get("/", (req, res) => {
   res.send("Home /");
 });
-
+// tes nih asas
 router.get("/register", ControllerUser.register);
 
 router.post("/register", ControllerUser.postRegister);
